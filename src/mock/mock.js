@@ -22,3 +22,5 @@ Mock.mock('/get_banner',[
 
 Mock.mock('/get_recommend', data.data.recommend);
 
+Mock.mock('/get_floor1', data.data.floor1);
+

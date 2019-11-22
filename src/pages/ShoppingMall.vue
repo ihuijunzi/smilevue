@@ -39,6 +39,7 @@
         </swiper>
       </div>
     </div>
+    <floor1></floor1>
   </div>
 </template>
 
@@ -50,11 +51,14 @@
   import 'swiper/dist/css/swiper.css'
   import {swiper, swiperSlide} from 'vue-awesome-swiper';
 
+  import floor1 from "../components/Floor1"
+
   export default {
     name: 'ShoppingMall',
     components:{
       swiper,
-      swiperSlide
+      swiperSlide,
+      floor1
     },
     data () {
       return {
