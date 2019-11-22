@@ -5,6 +5,7 @@ import ShoppingMall from '@/pages/ShoppingMall'
 Vue.use(Router)
 
 export default new Router({
+  mode:'hash',  // 'history'
   routes: [
     {
       path: '/',

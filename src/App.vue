@@ -20,4 +20,10 @@ export default {
   /*color: #2c3e50;*/
   /*margin-top: 60px;*/
 }
+.fz-12{
+  font-size: 12px;
+}
+.t-l{
+  text-align: left;
+}
 </style>
