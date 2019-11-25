@@ -38,6 +38,7 @@
 <script>
   import {getAxios} from '../public/getAxios'
   import URL from "../public/serviceApi.config"
+  import {Toast} from 'vant'
 
   export default {
     name: 'Login',
@@ -53,8 +54,12 @@
       },
       async useRegister(){
         let {username, password} = this;
-        let resData = await getAxios('post', URL.register, {});
-        console.log(resData);
+        let resData = await getAxios('post', URL.register, {username, password});
+        if(resData.code=== 200){
+          Toast.success("注册成功");
+        }else{
+          Toast.fail("注册失败")
+        }
       }
     }
   }

@@ -10,6 +10,8 @@ const userSchema = new Schema({
   createAt:{type:Date,default:Date.now()},
   lastLoginAt:{type:Date,default:Date.now()}
 
+},{
+  collection:'user'
 })
 
 //发布模型
