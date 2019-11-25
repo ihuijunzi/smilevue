@@ -53,7 +53,7 @@
       },
       async useRegister(){
         let {username, password} = this;
-        let resData = await getAxios('get', URL.register, {});
+        let resData = await getAxios('post', URL.register, {});
         console.log(resData);
       }
     }

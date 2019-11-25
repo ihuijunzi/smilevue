@@ -9,8 +9,7 @@ router.post('/register', async (ctx) => {
   // ctx.setHeader('Access-Control-Allow-Origin', 'http://localhost:3000/')
   // ctx.setHeader("Access-Control-Allow-Methods", "POST, GET, OPTIONS, DELETE")
   // ctx.setHeader("Access-Control-Allow-Credentials", "true")
-  // ctx.body = ctx.request.body
-  ctx.body = "这是返回值"
+  ctx.body = ctx.request.body
 
 })
 module.exports = router
