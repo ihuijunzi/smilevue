@@ -9,6 +9,7 @@
         </van-col>
       </van-row>
     </div>
+
     <div class="swipeWrapper">
       <van-swipe :autoplay="3000" indicator-color="white" class="swipeWrapper">
         <van-swipe-item v-for="(item, idx) in swipePicsArr" :key="idx">
@@ -40,6 +41,13 @@
       </div>
     </div>
     <floor1></floor1>
+    <div>
+      <van-col span="8"></van-col>
+      <van-col span="8">
+        <van-button type="primary" size="large" to="login">登录</van-button>
+      </van-col>
+      <van-col span="8"></van-col>
+    </div>
   </div>
 </template>
 
@@ -52,6 +60,7 @@
   import {swiper, swiperSlide} from 'vue-awesome-swiper';
 
   import floor1 from "../components/Floor1"
+  import URL from "../public/serviceApi.config"
 
   export default {
     name: 'ShoppingMall',
@@ -95,12 +104,12 @@
         }
       },
       async getBanner () {
-        let resPicArr = await getAxios('get', '/get_banner', {})
+        let resPicArr = await getAxios('get', URL.getBanner, {})
         console.log(resPicArr)
         this.swipePicsArr = resPicArr
       },
       async getRecommend (){
-        let resCommend = await getAxios('get', '/get_recommend', {});
+        let resCommend = await getAxios('get', URL.getRecommend, {});
         console.log(resCommend)
         //清空数组
         // this.recommendArr.splice(0, this.recommendArr.length);

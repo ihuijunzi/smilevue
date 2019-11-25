@@ -20,6 +20,7 @@
 
 <script>
   import {getAxios} from '../public/getAxios'
+  import URL from "../public/serviceApi.config"
 
   export default {
     name: 'Floor1',
@@ -33,7 +34,7 @@
     },
     methods:{
       async getFloor1 (){
-        let resFloor1 = await getAxios("get", "/get_floor1");
+        let resFloor1 = await getAxios("get", URL.getFloor1);
         console.log(resFloor1);
         this.floor1 = [];
         this.floor1.push(...resFloor1);

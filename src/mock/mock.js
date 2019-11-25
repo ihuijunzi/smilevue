@@ -1,8 +1,9 @@
 import Mock from 'mockjs'
-import data from "./data.json"
+import data from "./data.json";
+import URL from '@/public/serviceApi.config'
 
 
-Mock.mock(/\/api\/msdk\/proxy\/query_common_credit/, {
+Mock.mock(URL.mockTest, {
   ret:0,
   data:{
     'mtime':'@datetime',
@@ -14,13 +15,13 @@ Mock.mock(/\/api\/msdk\/proxy\/query_common_credit/, {
   }
 });
 
-Mock.mock('/get_banner',[
+Mock.mock(URL.getBanner,[
   {picUrl: '@image'},
   {picUrl: '@image'},
   {picUrl: '@image'}
 ]);
 
-Mock.mock('/get_recommend', data.data.recommend);
+Mock.mock(URL.getRecommend, data.data.recommend);
 
-Mock.mock('/get_floor1', data.data.floor1);
+Mock.mock(URL.getFloor1, data.data.floor1);
 
